@@ -1,0 +1,128 @@
+/* Barra lateral (sidebar) */
+.sidebar {
+    width: 12%; /* Ancho de la barra lateral */
+    background-color: #003366; /* Azul oscuro */
+    padding: 0; /* Elimina el padding interno */
+    position: fixed; /* Fija la barra lateral en la pantalla */
+    top: 60px; /* Ajusta según la altura del encabezado + espacio deseado */
+    left: 0;
+    height: calc(100% - 120px); /* Ocupa toda la altura menos el encabezado y pie de página */
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    color: white;
+    padding: 15px 20px; /* Espaciado alrededor del título "Menú" */
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 1.4em;
+    background-color: #002244; /* Fondo ligeramente más oscuro */
+    border-bottom: 1px solid #004080; /* Línea divisoria debajo del título */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 8px;
+    background-color: #f7fbff;
+}
+
+.sidebar ul li {
+    margin: 0; /* Elimina el margen entre los elementos de la lista */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Asegura que cada enlace ocupe toda la línea */
+    padding: 10px 20px; /* Espaciado interno para los enlaces */
+    background-color: #004080; /* Color de fondo para los enlaces */
+    border-bottom: 1px solid #045aaf; /* Línea divisoria debajo de cada enlace */
+}
+
+.sidebar ul li a:hover {
+    background-color: #00509e; /* Color más claro en hover */
+}
+
+/* Contenedor de Ventas */
+.sidebar .ventas-link {
+    display: flex;
+    flex-direction: column;       /* Apila el icono y texto en columna */
+    align-items: center;          /* Centra horizontalmente */
+    justify-content: center;      /* Centra verticalmente */
+    height: 100%;                 /* Ocupa toda la altura disponible */
+    text-decoration: none;
+    color: white;
+    padding: 100px 0;              /* Espaciado interno ajustable */
+    background-color: #004080;    /* Fondo para la sección de Ventas */
+}
+
+.ventas-link i {
+    font-size: 3em;               /* Tamaño del icono */
+    margin-bottom: 10px;           /* Espacio entre el icono y el texto */
+}
+
+.ventas-link span {
+    font-size: 1em;               /* Ajusta el tamaño de la palabra "Ventas" */
+}
+
+/* Media Query para pantallas con un máximo de 768px (tablets y pantallas medianas) */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* La barra lateral ocupa todo el ancho */
+        top: 0; /* Ajusta la posición superior */
+        height: auto; /* Deja que la altura se ajuste automáticamente */
+        position: relative; /* Cambia la posición para que sea fluido con el contenido */
+    }
+
+    .sidebar h2 {
+        font-size: 1.2em; /* Reduce el tamaño del título */
+        padding: 10px 15px; /* Ajusta el espaciado */
+    }
+
+    .sidebar ul {
+        padding-top: 5px; /* Reduce el espacio superior */
+    }
+
+    .sidebar ul li a {
+        padding: 8px 15px; /* Ajusta el espaciado de los enlaces */
+    }
+
+    .sidebar .ventas-link {
+        padding: 50px 0; /* Ajusta el espaciado de la sección de ventas */
+    }
+
+    .sidebar .ventas-link i {
+        font-size: 2.5em; /* Reduce el tamaño del icono */
+    }
+}
+
+/* Media Query para pantallas con un máximo de 480px (teléfonos móviles) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* La barra lateral ocupa todo el ancho */
+        position: relative; /* Cambio a posición relativa para facilitar la adaptación */
+        height: auto; /* Ajusta la altura de la barra lateral */
+    }
+
+    .sidebar h2 {
+        font-size: 1em; /* Reduce el tamaño del título */
+        padding: 10px 15px; /* Ajusta el espaciado */
+    }
+
+    .sidebar ul {
+        padding-top: 5px; /* Ajusta el espacio superior */
+    }
+
+    .sidebar ul li a {
+        padding: 8px 10px; /* Ajusta el espaciado de los enlaces */
+    }
+
+    .sidebar .ventas-link {
+        padding: 30px 0; /* Ajusta el espaciado de la sección de ventas */
+    }
+
+    .sidebar .ventas-link i {
+        font-size: 2em; /* Reduce el tamaño del icono */
+    }
+}
